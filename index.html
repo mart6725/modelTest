@@ -2,11 +2,21 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+        var modelSelect = document.getElementById('modelSelect');
+        var modelViewer = document.getElementById('model');
+
+        modelSelect.addEventListener('change', function() {
+            modelViewer.src = this.value;
+        });
+    </script>
 </head>
 <body>
+    <select id="modelSelect">
+        <option value="https://modelviewer.dev/shared-assets/models/Astronaut.glb">Astronaut</option>
+        <option value="https://modelviewer.dev/shared-assets/models/shishkebab.glb">Kebab</option>
+    </select>
     <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-              ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
               alt="A 3D model of an astronaut"
               ar
               auto-rotate
