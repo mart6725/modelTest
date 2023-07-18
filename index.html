@@ -11,17 +11,6 @@
               auto-rotate
               camera-controls>
     </model-viewer>
-
-    <script>
-        window.addEventListener('load', (event) => {
-            var modelSelect = document.getElementById('modelSelect');
-            var modelViewer = document.getElementById('model');
-
-            modelSelect.addEventListener('change', function() {
-                modelViewer.src = this.value;
-            });
-        });
-    </script>
     <script>
         window.addEventListener('message', function(event) {
             var modelViewer = document.querySelector('model-viewer');
