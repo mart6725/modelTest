@@ -26,6 +26,12 @@
             });
         });
     </script>
+    <script>
+        window.addEventListener('message', function(event) {
+            var modelViewer = document.querySelector('model-viewer');
+            modelViewer.src = event.data;
+        });
+    </script>
 </body>
 </html>
 
